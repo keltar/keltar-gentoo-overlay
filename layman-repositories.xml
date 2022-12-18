@@ -1,0 +1,11 @@
+<repositories encoding="unicode" version="1.1">
+	<repo priority="50" quality="experimental">
+		<name>keltar-overlay</name>
+		<description>keltar's personal Gentoo overlay</description>
+		<owner>
+			<email>keltar.gw@gmail.com</email>
+			<name>keltar</name>
+		</owner>
+		<source type="git">https://github.com/keltar/keltar-gentoo-overlay.git</source>
+	</repo>
+</repositories>
