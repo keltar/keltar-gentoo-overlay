@@ -1,4 +1,8 @@
-# keltar gentoo orverlay
+# keltar's personal Gentoo orverlay
 
-*FIXME* add layman add instruction
-*FIXME* add packages list
+## Install with layman
+
+```
+emerge --ask app-portage/layman
+layman -o https://raw.githubusercontent.com/keltar/keltar-gentoo-overlay/main/layman-repositories.xml -f -a keltar-overlay
+```
