@@ -1,4 +1,4 @@
-# keltar's personal Gentoo orverlay
+# keltar's personal Gentoo overlay
 
 ## Install with layman
 
