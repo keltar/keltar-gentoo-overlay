@@ -1,0 +1,24 @@
+--- socat_orig/filan.c	2021-01-29 09:51:35.806332934 +0500
++++ socat/filan.c	2021-01-29 10:04:41.674446298 +0500
+@@ -20,6 +20,21 @@
+ 
+ #include "filan.h"
+ 
++#include <errno.h>
++#include <fcntl.h>
++
++int
++isastream (int fildes)
++{
++  /* In general we do not have a STREAMS implementation and therefore
++     return 0.  But for invalid file descriptors we have to return an
++     error.  */
++  if (fcntl (fildes, F_GETFD) < 0)
++    return -1;
++
++  /* No STREAM.  */
++  return 0;
++}
+ 
+ struct sockopt {
+    int so;
