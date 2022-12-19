@@ -14,11 +14,11 @@ if [[ ${PV} == "9999" ]]; then
 else
 	SRC_URI="https://github.com/keltar/gkrellmradeontop/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/${PN}-${PV}"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-misc/radeontop[video_cards_amdgpu]
 	app-admin/gkrellm:2[X]
