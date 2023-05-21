@@ -1,6 +1,13 @@
 # keltar's personal Gentoo overlay
 
-## Install with layman
+## Install with eselect repository
+
+```
+emerge --ask app-eselect/eselect-repository
+eselect repository add keltar-overlay git https://github.com/keltar/keltar-gentoo-overlay
+```
+
+## Install with layman (deprecated)
 
 ```
 emerge --ask app-portage/layman
