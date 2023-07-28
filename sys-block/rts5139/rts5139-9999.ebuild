@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit linux-mod
+inherit linux-mod-r1
 
 DESCRIPTION="RTS5139 USB MMC card reader driver"
 HOMEPAGE="https://github.com/asymingt/rts5139"
@@ -21,13 +21,13 @@ DEPEND="virtual/linux-sources"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-MODULE_NAMES="rts5139(scsi)"
-BUILD_TARGETS="all"
-
 src_compile() {
-	linux-mod_src_compile
+	local modlist=(rts5139=rts5139)
+	local modargs=(KVER="${KV_FULL}")
+
+	linux-mod-r1_src_compile
 }
 
 src_install() {
-	linux-mod_src_install
+	linux-mod-r1_src_install
 }
