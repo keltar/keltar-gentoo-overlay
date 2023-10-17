@@ -1,0 +1,10 @@
+#!/sbin/openrc-run
+# Copyright 2023 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="go-shadowsocks2 daemon"
+description=""
+supervisor=supervise-daemon
+command=/usr/bin/go-shadowsocks2
+command_args="-c \"${GO_SHADOWSOCKS2_URL}\" -socks \"${GO_SHADOWSOCKS2_SOCKS_ADDR}\" ${GO_SHADOWSOCKS2_ARGS}"
+command_user="nobody:nogroup"

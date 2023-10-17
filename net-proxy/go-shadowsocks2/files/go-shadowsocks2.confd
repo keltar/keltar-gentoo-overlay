@@ -1,0 +1,6 @@
+# Set shadowsocks URL in form of 'ss://username:password@address:port'
+#GO_SHADOWSOCKS2_URL=""
+# Set local port for socks5 listener
+GO_SHADOWSOCKS2_SOCKS_ADDR=":1080"
+# Extra arguments.
+GO_SHADOWSOCKS2_ARGS="-u"
