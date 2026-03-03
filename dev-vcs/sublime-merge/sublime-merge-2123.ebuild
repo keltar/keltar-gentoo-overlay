@@ -27,7 +27,7 @@ RDEPEND="
 "
 
 QA_PREBUILD="*"
-S="${WORKDIR}/${MY_PN}"
+S="${WORKDIR}/${MY_PN}-x64-tar"
 
 src_prepare(){
 	sed -i -e "/OnlyShowIn/d" "${MY_PN}.desktop"
